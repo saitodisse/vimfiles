@@ -16,7 +16,7 @@ Clone this repo into your home directory either as .vim (linux/mac) or
 vimfiles (Windows). Such as:
 
 <pre><code>
-git clone git://github.com/akitaonrails/vimfiles.git ~/.vim
+git clone git://github.com/fabiokung/vimfiles.git ~/.vim
 </pre></code>
 
 Then 'cd' into the repo and run this to get the snippets submodule:
@@ -42,6 +42,12 @@ source ~/.vim/vimrc      "linux
 source ~/vimfiles/vimrc  "windows
 </code></pre>
 
+As an alternative, you may also have a very small ~/.vimrc file containing:
+
+<pre><code>
+runtime vimrc
+</pre></code>
+
 h2. Help Tags
 
 At first usage of vim, type ":" while in command mode and execute:
@@ -56,7 +62,7 @@ You will need these dependencies figured out:
 
 * Ruby (for the fuzzy finder plugin)
 * Exuberant Ctags (http://ctags.sourceforge.net/)
-* Ncurses-term (in Linux only)
+* Ncurses-term (in Linux only), or better vim-full on some Debian based distros
 
 In Ubuntu, for example, you will have to do:
 
