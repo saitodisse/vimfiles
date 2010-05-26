@@ -268,6 +268,7 @@ if has("gui_running")
     endif
 else
     if has("gui")
+        set t_Co=256
         let s:use_CSApprox = 1
         let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
         colorscheme aqua
