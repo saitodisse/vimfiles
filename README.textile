@@ -6,6 +6,10 @@ Mac. Download from:
 * (Windows) http://www.vim.org/download.php#pc (gvim72.exe)
 * (Mac) http://code.google.com/p/macvim/downloads/list (snapshot-52)
 
+A nice terminal based option for Debian based distributions is the **vim-full** package:
+
+bc. apt-get install vim-full
+
 h1. Usage
 
 Troubleshoot: Because of the large amount of submodules, if you ever have any
