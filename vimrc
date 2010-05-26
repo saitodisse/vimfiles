@@ -253,7 +253,7 @@ if has("gui_running")
         colorscheme railscasts
         set guitablabel=%M%t
         set lines=40
-        set columns=125
+        set columns=140
     endif
     if has("gui_mac") || has("gui_macvim")
         set guifont=Monaco:h14
