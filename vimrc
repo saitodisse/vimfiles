@@ -267,8 +267,14 @@ if has("gui_running")
         set enc=utf-8
     endif
 else
-    "dont load csapprox if there is no gui support - silences an annoying warning
-    let g:CSApprox_loaded = 1
+    if has("gui")
+        let s:use_CSApprox = 1
+        let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+        colorscheme aqua
+    else
+        "dont load csapprox if there is no gui support - silences an annoying warning
+        let g:CSApprox_loaded = 1
+    endif
 endif
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
