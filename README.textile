@@ -46,7 +46,7 @@ As an alternative, you may also have a very small ~/.vimrc file containing:
 
 <pre><code>
 runtime vimrc
-</pre></code>
+</code></pre>
 
 h2. Help Tags
 
