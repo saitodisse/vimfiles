@@ -56,9 +56,7 @@ You will need these dependencies figured out:
 
 In Ubuntu, for example, you will have to do:
 
-<pre><code>
-apt-get install exuberant-ctags ncurses-term
-</code></pre>
+bc. apt-get install exuberant-ctags ncurses-term
 
 On Windows you have to download Ctags and add ctags.exe in your PATH.
 
@@ -75,11 +73,9 @@ so it behaves the same as Textmate.
 You may have problems in Mac/Linux because this plugin requires a native
 extension, so you will have to do this:
 
-<pre><code>
-cd ~/.vim/bundle/Command-T/ruby/command-t
+bc. cd ~/.vim/bundle/Command-T/ruby/command-t
 ruby extconf.rb
 make
-</pre></code>
 
 This means that you need to have your Ruby source files and GCC also 
 installed. A binary for Windows is already bundled so it should just
