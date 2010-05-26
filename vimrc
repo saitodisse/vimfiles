@@ -268,14 +268,10 @@ if has("gui_running")
     endif
 else
     if has("gui")
-        set t_Co=256
-        let s:use_CSApprox = 1
-        let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
         colorscheme aqua
-    else
-        "dont load csapprox if there is no gui support - silences an annoying warning
-        let g:CSApprox_loaded = 1
     endif
+    "dont load csapprox if there is no gui support - silences an annoying warning
+    let g:CSApprox_loaded = 1
 endif
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
