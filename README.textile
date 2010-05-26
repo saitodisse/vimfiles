@@ -15,38 +15,28 @@ your old .vim folder and just git clone a new version.
 Clone this repo into your home directory either as .vim (linux/mac) or 
 vimfiles (Windows). Such as:
 
-<pre><code>
-git clone git://github.com/fabiokung/vimfiles.git ~/.vim
-</pre></code>
+bc. git clone git://github.com/fabiokung/vimfiles.git ~/.vim
 
 Then 'cd' into the repo and run this to get the snippets submodule:
 
-<pre><code>
-git submodule init
+bc. git submodule init
 git submodule update
-</code></pre>
 
 Now just copy (or symlink) the .vim/vimrc file as .vimrc (Mac/Linux)
 or copy as _vimrc (Windows) in your home directory. In Mac and Linux, the 
 easiest thing to do is:
 
-<pre><code>
-ln -s ~/.vim/vimrc ~/.vimrc
-</pre></code>
+bc. ln -s ~/.vim/vimrc ~/.vimrc
 
 If you already have a custom .vimrc file, append the following lines to
 load everything else along with your personal hacks:
 
-<pre><code>
-source ~/.vim/vimrc      "linux
+bc. source ~/.vim/vimrc      "linux
 source ~/vimfiles/vimrc  "windows
-</code></pre>
 
 As an alternative, you may also have a very small ~/.vimrc file containing:
 
-<pre><code>
-runtime vimrc
-</code></pre>
+bc. runtime vimrc
 
 h2. Help Tags
 
