@@ -18,7 +18,7 @@ set hlsearch    "hilight searches by default
 
 set number      "add line numbers
 set showbreak=...
-set wrap linebreak nolist
+set nowrap linebreak nolist
 
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
