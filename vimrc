@@ -360,3 +360,7 @@ function! s:HighlightLongLines(width)
         echomsg "Usage: HighlightLongLines [natural number]"
     endif
 endfunction
+
+" insert newline without entering insert mode
+map <S-Enter> O<Esc>j
+map <CR> o<Esc>k
