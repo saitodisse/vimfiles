@@ -77,7 +77,7 @@ set statusline+=%#error#
 set statusline+=%{&paste?'[paste]':''}
 set statusline+=%*
 
-set statusline+=%{GitBranch()}
+set statusline+=\ %{'('.GitBranch().')'}
 
 set statusline+=%=      "left/right separator
 set statusline+=%{StatuslineCurrentHighlight()}\ \ "current highlight
