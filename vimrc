@@ -275,6 +275,7 @@ else
 endif
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
+nmap <silent> <Leader>s :TlistToggle<CR>
 
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
