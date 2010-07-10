@@ -58,3 +58,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "bundle/SudoEdit"]
+	path = bundle/SudoEdit
+	url = git://github.com/chrisbra/SudoEdit.vim.git
