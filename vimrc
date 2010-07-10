@@ -252,7 +252,8 @@ if has("gui_running")
         set term=gnome-256color
         colorscheme ir_black
     else
-        colorscheme railscasts
+        colorscheme ir_black
+        "colorscheme railscasts
         set guitablabel=%M%t
         set lines=40
         set columns=140
