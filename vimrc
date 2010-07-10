@@ -250,7 +250,7 @@ if has("gui_running")
 
     if has("gui_gnome")
         set term=gnome-256color
-        colorscheme aqua
+        colorscheme ir_black
     else
         colorscheme railscasts
         set guitablabel=%M%t
@@ -270,7 +270,7 @@ if has("gui_running")
     endif
 else
     if has("gui")
-        colorscheme aqua
+        colorscheme ir_black
     endif
     "dont load csapprox if there is no gui support - silences an annoying warning
     let g:CSApprox_loaded = 1
