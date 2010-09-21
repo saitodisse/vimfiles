@@ -61,3 +61,6 @@
 [submodule "bundle/SudoEdit"]
 	path = bundle/SudoEdit
 	url = git://github.com/chrisbra/SudoEdit.vim.git
+[submodule "plugin/yankring"]
+	path = plugin/yankring
+	url = git://github.com/chrismetcalf/vim-yankring.git
