@@ -212,8 +212,8 @@ set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 
 "display tabs and trailing spaces
-"set list
-"set listchars=tab:\ \ ,extends:>,precedes:<
+set list
+set listchars=tab:\ \ ,extends:>,precedes:<
 " disabling list because it interferes with soft wrap
 
 set formatoptions-=o "dont continue comments when pushing o/O
@@ -227,9 +227,6 @@ set sidescroll=1
 filetype plugin on
 filetype indent on
 
-"load pathogen managed plugins
-call pathogen#runtime_append_all_bundles()
-
 "turn on syntax highlighting
 syntax on
 
@@ -239,10 +236,6 @@ set ttymouse=xterm2
 
 "hide buffers when not displayed
 set hidden
-
-"Command-T configuration
-let g:CommandTMaxHeight=10
-let g:CommandTMatchWindowAtTop=1
 
 if has("gui_running")
     "tell the term has 256 colors
@@ -271,12 +264,19 @@ if has("gui_running")
         set enc=utf-8
     endif
 else
+    "dont load csapprox if there is no gui support - silences an annoying warning
+    let g:CSApprox_loaded = 1
     if has("gui")
         colorscheme ir_black
     endif
-    "dont load csapprox if there is no gui support - silences an annoying warning
-    let g:CSApprox_loaded = 1
 endif
+
+"load pathogen managed plugins
+call pathogen#runtime_append_all_bundles()
+
+"Command-T configuration
+let g:CommandTMaxHeight=10
+let g:CommandTMatchWindowAtTop=1
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nmap <silent> <Leader>s :TlistToggle<CR>
