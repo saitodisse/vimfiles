@@ -64,3 +64,6 @@
 [submodule "plugin/yankring"]
 	path = plugin/yankring
 	url = git://github.com/chrismetcalf/vim-yankring.git
+[submodule "plugin/scratch"]
+	path = plugin/scratch
+	url = git://github.com/jkramer/vim-scratch.git
