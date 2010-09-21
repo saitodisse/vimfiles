@@ -245,15 +245,16 @@ if has("gui_running")
         set term=gnome-256color
         colorscheme ir_black
     else
+        "colorscheme railscasts
         "colorscheme mac_classic
         colorscheme ir_black
-        "colorscheme railscasts
         set guitablabel=%M%t
         set lines=55
         set columns=205
     endif
     if has("gui_mac") || has("gui_macvim")
         set guifont=Monaco:h14
+        "set guifont=Menlo:h14
         " make Mac's Option key behave as the Meta key
         set invmmta
         " comma as the leader key
