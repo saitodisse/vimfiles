@@ -67,3 +67,6 @@
 [submodule "plugin/scratch"]
 	path = plugin/scratch
 	url = git://github.com/jkramer/vim-scratch.git
+[submodule "bundle/camelcasemotion"]
+	path = bundle/camelcasemotion
+	url = git://github.com/vim-scripts/camelcasemotion.git
