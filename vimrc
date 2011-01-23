@@ -304,6 +304,7 @@ let g:ragtag_global_maps = 1
 
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
+let g:syntastic_disabled_filetypes = ['cpp']
 
 "key mapping for vimgrep result navigation
 map <A-o> :copen<CR>
