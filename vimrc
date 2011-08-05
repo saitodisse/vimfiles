@@ -4,6 +4,9 @@
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
+set backupdir=/tmp,/var/tmp,.,./.backup
+set directory=/tmp,/var/tmp,.,./.backup
+
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
