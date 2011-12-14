@@ -226,9 +226,11 @@ set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
 
+"load pathogen managed plugins
+call pathogen#infect()
+
 "load ftplugins and indent files
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 "turn on syntax highlighting
 syntax on
@@ -274,9 +276,6 @@ else
         colorscheme ir_black
     endif
 endif
-
-"load pathogen managed plugins
-call pathogen#runtime_append_all_bundles()
 
 "Command-T configuration
 let g:CommandTMaxHeight=10
