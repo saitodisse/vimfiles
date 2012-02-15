@@ -255,7 +255,7 @@ if has("gui_running")
         colorscheme ir_black
         set guitablabel=%M%t
         set lines=55
-        set columns=205
+        set columns=125
     endif
     if has("gui_mac") || has("gui_macvim")
         set guifont=Monaco:h14
@@ -373,4 +373,7 @@ endfunction
 " insert newline without entering insert mode
 map <M-S-Enter> O<Esc>j
 map <M-Enter> o<Esc>k
+
+" minitest
+set completefunc=syntaxcomplete#Complete
 
