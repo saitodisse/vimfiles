@@ -82,3 +82,9 @@
 [submodule "bundle/checksyntax"]
 	path = bundle/checksyntax
 	url = git://github.com/tomtom/checksyntax_vim.git
+[submodule "bundle/minitest"]
+	path = bundle/minitest
+	url = git://github.com/sunaku/vim-ruby-minitest.git
+[submodule "bundle/afc"]
+	path = bundle/afc
+	url = git://github.com/adrianoalmeida7/vim-afc.git
