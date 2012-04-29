@@ -90,7 +90,7 @@
 	url = git://github.com/adrianoalmeida7/vim-afc.git
 [submodule "bundle/hammer"]
 	path = bundle/hammer
-	url = git://github.com/robgleeson/hammer.vim.git
+	url = https://github.com/matthias-guenther/hammer.vim.git
 [submodule "bundle/golang"]
 	path = bundle/golang
 	url = git://github.com/jnwhiteh/vim-golang.git
