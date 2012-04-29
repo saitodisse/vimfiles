@@ -20,8 +20,13 @@ set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 
 set number      "add line numbers
+
+"display tabs and trailing spaces
+set list
+set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+
 set showbreak=...
-set nowrap linebreak nolist
+set nowrap linebreak
 
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
@@ -43,6 +48,8 @@ set visualbell t_vb=
 nmap <Down> gj
 nmap <Up> gk
 set fo=l
+
+set encoding=utf-8
 
 "statusline setup
 set statusline=%f       "tail of the filename
@@ -91,6 +98,44 @@ set laststatus=2
 
 "turn off needless toolbar on gvim/mvim
 set guioptions-=T
+
+"indent settings
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autoindent
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=3       "deepest fold is 3 levels
+set nofoldenable        "dont fold by default
+
+set wildmode=list:longest   "make cmdline tab completion similar to bash
+set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+
+set formatoptions-=o "dont continue comments when pushing o/O
+
+"vertical/horizontal scroll off settings
+set scrolloff=3
+set sidescrolloff=7
+set sidescroll=1
+
+"load pathogen managed plugins
+call pathogen#infect()
+
+"load ftplugins and indent files
+filetype plugin indent on
+
+"turn on syntax highlighting
+syntax on
+
+"some stuff to get the mouse going in term
+set mouse=a
+set ttymouse=xterm2
+
+"hide buffers when not displayed
+set hidden
 
 "recalculate the trailing whitespace warning when idle, and after saving
 autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
@@ -199,49 +244,6 @@ function! s:Median(nums)
     endif
 endfunction
 
-"indent settings
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set autoindent
-
-"folding settings
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
-
-set wildmode=list:longest   "make cmdline tab completion similar to bash
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-
-"display tabs and trailing spaces
-set list
-set listchars=tab:\ \ ,extends:>,precedes:<
-" disabling list because it interferes with soft wrap
-
-set formatoptions-=o "dont continue comments when pushing o/O
-
-"vertical/horizontal scroll off settings
-set scrolloff=3
-set sidescrolloff=7
-set sidescroll=1
-
-"load pathogen managed plugins
-call pathogen#infect()
-
-"load ftplugins and indent files
-filetype plugin indent on
-
-"turn on syntax highlighting
-syntax on
-
-"some stuff to get the mouse going in term
-set mouse=a
-set ttymouse=xterm2
-
-"hide buffers when not displayed
-set hidden
-
 if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
@@ -289,7 +291,7 @@ nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
 "map to bufexplorer
-nnoremap <leader>b :BufExplorer<cr>
+nnoremap <leader>f :BufExplorer<CR>
 
 "map to CommandT TextMate style finder
 nnoremap <leader>t :CommandT<CR>
@@ -373,6 +375,12 @@ endfunction
 " insert newline without entering insert mode
 map <M-S-Enter> O<Esc>j
 map <M-Enter> o<Esc>k
+
+"spell check when writing commit logs
+autocmd filetype svn,*commit* setlocal spell
+
+"snipmate settings
+let g:snips_author = "Fabio Kung"
 
 " minitest
 set completefunc=syntaxcomplete#Complete
