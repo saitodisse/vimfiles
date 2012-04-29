@@ -52,6 +52,7 @@ set fo=l
 set encoding=utf-8
 
 "statusline setup
+set statusline=%n       "buffer number
 set statusline=%f       "tail of the filename
 
 "display a warning if fileformat isnt unix
@@ -278,6 +279,10 @@ else
         colorscheme ir_black
     endif
 endif
+
+"Powerline
+call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
+let g:Powerline_symbols = 'fancy'
 
 "Command-T configuration
 let g:CommandTMaxHeight=10
