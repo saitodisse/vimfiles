@@ -257,8 +257,8 @@ if has("gui_running")
         "colorscheme mac_classic
         colorscheme ir_black
         set guitablabel=%M%t
-        set lines=55
-        set columns=125
+        set lines=50
+        set columns=105
     endif
     if has("gui_mac") || has("gui_macvim")
         set guifont=Monaco:h14
@@ -267,6 +267,7 @@ if has("gui_running")
         set invmmta
         " comma as the leader key
         let mapleader=","
+        set guioptions-=r
     endif
     if has("gui_win32") || has("gui_win32s")
         set guifont=Consolas:h12
