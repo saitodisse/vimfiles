@@ -366,6 +366,12 @@ function! SetCursorPosition()
     end
 endfunction
 
+if exists('+colorcolumn')
+    set colorcolumn=+1
+else
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
 "define :HighlightLongLines command to highlight the offending parts of
 "lines that are longer than the specified length (defaulting to 80)
 command! -nargs=? HighlightLongLines call s:HighlightLongLines('<args>')
