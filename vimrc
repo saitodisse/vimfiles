@@ -285,10 +285,6 @@ endif
 call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
 let g:Powerline_symbols = 'fancy'
 
-"Command-T configuration
-let g:CommandTMaxHeight=10
-let g:CommandTMatchWindowAtTop=1
-
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nmap <silent> <Leader>s :TlistToggle<CR>
 
@@ -299,14 +295,14 @@ inoremap <C-L> <C-O>:nohls<CR>
 "map to bufexplorer
 nnoremap <leader>f :BufExplorer<CR>
 
-"map to CommandT TextMate style finder
-nnoremap <leader>t :CommandT<CR>
-
 "map Q to something useful
 noremap Q gq
 
 "make Y consistent with C and D
 nnoremap Y y$
+
+"quicksilver in fuzzy mode by default
+let g:QSMatchFn = "fuzzy"
 
 "bindings for ragtag
 inoremap <M-o>       <Esc>o
