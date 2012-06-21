@@ -100,6 +100,6 @@
 [submodule "bundle/vim-rake"]
 	path = bundle/vim-rake
 	url = https://github.com/tpope/vim-rake.git
-[submodule "bundle/quicksilver"]
-	path = bundle/quicksilver
-	url = https://github.com/Bogdanp/quicksilver.vim.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
