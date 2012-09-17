@@ -253,7 +253,7 @@ if has("gui_running")
     set t_Co=256
 
     if has("gui_gnome")
-        set guifont=Neep\ 14
+        set guifont=Monospace\ 13
         set term=gnome-256color
         colorscheme ir_black
     else
